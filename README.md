@@ -1,5 +1,4 @@
 # Description
-![App Flow](images/appflow.png)
 
 This project combines Server-Side Events with Redis PubSub for real-time push events to the browser.
 
@@ -45,9 +44,6 @@ The RedisMessagePublisher handles publishing messages to a Redis Pub/Sub channel
 
 This class listens to messages from Redis. When a message is received, it deserializes the message to a RedisNotificationPayload object. It then calls the EmitterService to push the notification to the clients via SSE.
 
-# Usecase
-![usecase](images/usecase.png)
-
 # Features
 
 We are simulating a scalable realtime push notification feed in our application. 
@@ -67,4 +63,22 @@ We are simulating a scalable realtime push notification feed in our application.
 * Server Side Events 
 * Redis pub/sub
 * React 
+
+
+# Prerequisite
+
+Ensure you have Maven installed. You can verify this by running mvn -v in your terminal.
+
+Ensure you have JDK installed. You can verify this by running java -version in your terminal.
+
+# Testing
+
+1. Navigate to the backend service project directory and run command:
+
+`mvn clean install && mvn spring-boot:run`
+
+
+2. Navigate to the React client project directory and run command:
+
+`npm install && npm start`
 
