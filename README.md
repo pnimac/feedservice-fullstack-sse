@@ -44,6 +44,10 @@ The RedisMessagePublisher handles publishing messages to a Redis Pub/Sub channel
 
 This class listens to messages from Redis. When a message is received, it deserializes the message to a RedisNotificationPayload object. It then calls the EmitterService to push the notification to the clients via SSE.
 
+# Screenshots
+
+![screenshot](images/screenshot.png)
+
 # Features
 
 We are simulating a scalable realtime push notification feed in our application. 
@@ -53,10 +57,6 @@ We are simulating a scalable realtime push notification feed in our application.
 2. Second screen gives a way to publish events from the browser to Redis pubsub channel, wherein the field "TO" should be the username (topic-id) event needs to be published to.
 
 3. Multiple users can login parallely, send events and view push Notifications in the UI popup at the botttom-left and bell-icon in the menu bar in real-time.
-
-# Screenshots
-
-![screenshot](images/screenshot.png)
 
 # Technology Stack
 
