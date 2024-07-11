@@ -4,6 +4,10 @@ This project combines Server-Side Events with Redis PubSub for real-time push ev
 
 The endgame is to have events published to a Redis PubSub channel. Spring is configured to subscribe to this channel, and convert any received events to HTTP Server-sent Events [SSE] which are subsequently sent to the React client in the browser.
 
+# Work-flow
+
+![Sequence](images/sequence.png)
+
 # Components
 
 ![Architecture](images/architecture.png)
@@ -69,9 +73,12 @@ We are simulating a scalable realtime push notification feed in our application.
 
 # Prerequisite
 
-Ensure you have Maven installed. You can verify this by running mvn -v in your terminal.
+* Ensure you have Maven installed. You can verify this by running `mvn -v` in your terminal.
 
-Ensure you have JDK installed. You can verify this by running java -version in your terminal.
+* Ensure you have JDK installed. You can verify this by running `java -version` in your terminal.
+
+* Ensure you have Node.js and npm (Node Package Manager) installed. You can verify this by running `node -v` and `npm -v` in your terminal.
+  
 
 # Testing
 
