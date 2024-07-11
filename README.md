@@ -48,9 +48,11 @@ This class listens to messages from Redis. When a message is received, it deseri
 
 We are simulating a scalable realtime push notification feed in our application. 
 
-1. Landing page is a login screen. On logim, the username is used as the topicid to which user has subscribed for Notfication.
+1. Landing page is a login screen. On successfull login, user opens a long-lived HTTP SSE connection using and the username is used as the topic-id to which the current user has subscribed for Notification.
 
-2. Second screen gives a way to send events from the browser to other users, wherein their username is the topicid.
+2. Second screen gives a way to publish events from the browser to Redis pubsub channel, wherein the field "TO" should be the username (topic-id) event needs to be published to.
+
+3. Multiple users can login parallely, send events and view push Notifications in the UI popup at the botttom-left and bell-icon in the menu bar in real-time.
 
 # Screenshots
 
