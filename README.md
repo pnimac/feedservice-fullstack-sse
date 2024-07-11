@@ -1,4 +1,4 @@
-# Description
+# About
 
 This project combines Server-Side Events with Redis PubSub for real-time push events to the browser.
 
