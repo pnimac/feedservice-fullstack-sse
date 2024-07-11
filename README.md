@@ -4,13 +4,25 @@ This project combines Server-Side Events with Redis PubSub for real-time push ev
 
 The endgame is to have events published to a Redis PubSub channel. Spring is configured to subscribe to this channel, and convert any received events to HTTP Server-sent Events [SSE] which are subsequently sent to the React client in the browser.
 
-# Work-flow
-
-![Sequence](images/sequence.png)
-
-# Components
+# Architecture
 
 ![Architecture](images/architecture.png)
+
+# Features
+
+We are simulating a scalable realtime push notification feed in our application. 
+
+1. Landing page is a login screen. On successfull login, user opens a long-lived HTTP SSE connection and subscribes for Notifications, username is used as the topic-id current user is interested in.
+
+2. Second screen acts as a quick a tool to publish events from the browser to Redis pubsub channel, wherein the field "TO" should be the username (topic-id) to which the message (event) will be published to.
+
+3. Multiple users can login parallely, send messages(events) to each other and simultaneously view push Notifications in their respective UI.  
+
+4. The popup at the botttom-left of the user screen, count displayed on the bell-icon in menu bar and drop down on clicking the bell-icon gets updated in real-time.
+
+# Components work-flow
+
+![Sequence](images/sequence.png)
 
 ## 1. Server-Sent Events (SSE):
 
@@ -52,15 +64,6 @@ This class listens to messages from Redis. When a message is received, it deseri
 
 ![screenshot](images/screenshot.png)
 
-# Features
-
-We are simulating a scalable realtime push notification feed in our application. 
-
-1. Landing page is a login screen. On successfull login, user opens a long-lived HTTP SSE connection using and the username is used as the topic-id to which the current user has subscribed for Notification.
-
-2. Second screen gives a way to publish events from the browser to Redis pubsub channel, wherein the field "TO" should be the username (topic-id) event needs to be published to.
-
-3. Multiple users can login parallely, send events and view push Notifications in the UI popup at the botttom-left and bell-icon in the menu bar in real-time.
 
 # Technology Stack
 
