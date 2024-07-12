@@ -20,7 +20,7 @@ We are simulating a scalable realtime push notification feed in our application.
 
 4. The popup at the botttom-left of the user screen, count displayed on the bell-icon in menu bar and drop down on clicking the bell-icon gets updated in real-time.
 
-# Components work-flow
+# Components and work-flow
 
 ![Sequence](images/sequence.png)
 
