@@ -10,15 +10,15 @@ The endgame is to have events published to a Redis PubSub channel. Spring is con
 
 # Features
 
-We are simulating a scalable realtime push notification feed in our application. 
+We are implementing a scalable real-time push notification feed in our application.
 
-1. Landing page is a login screen. On successfull login, user opens a long-lived HTTP SSE connection and subscribes for Notifications, username is used as the topic-id current user is interested in.
+* Landing Page: Users are presented with a login screen. Upon successful login, the user establishes a long-lived HTTP SSE (Server-Sent Events) connection and subscribes to notifications. The username serves as the topic ID for the user's notifications.
 
-2. Second screen acts as a quick a tool to publish events from the browser to Redis pubsub channel, wherein the field "TO" should be the username (topic-id) to which the message (event) will be published to.
+* Event Publishing Screen: This screen provides a tool for publishing events from the browser to a Redis Pub/Sub channel. The "TO" field specifies the recipient's username (topic ID) to which the message (event) will be published.
 
-3. Multiple users can login parallely, send messages(events) to each other and simultaneously view push Notifications in their respective UI.  
+* Real-Time Interaction: Multiple users can log in concurrently, send messages (events) to each other, and receive real-time push notifications in their respective UIs.
 
-4. The popup at the botttom-left of the user screen, count displayed on the bell-icon in menu bar and drop down on clicking the bell-icon gets updated in real-time.
+* Notification Display: Notifications are displayed in real-time through a popup at the bottom-left of the user screen. Additionally, the notification count displayed on the bell icon in the menu bar and the dropdown menu accessed by clicking the bell icon are updated instantaneously.
 
 # Components and work-flow
 
