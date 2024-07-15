@@ -1,8 +1,6 @@
 # Description
 
-This project integrates Server-Sent Events (SSE) with Redis Pub/Sub to enable real-time push notifications to the browser.
-
-The primary objective is to publish events to a Redis Pub/Sub channel. Spring is configured to subscribe to this channel, converting any received events into HTTP Server-Sent Events (SSE), which are then delivered to the React client in the browser.
+This project integrates Server-Sent Events (SSE) with Redis Pub/Sub to enable real-time push notifications to the browser. The primary objective is to publish events to a Redis Pub/Sub channel. Spring is configured to subscribe to this channel, converting any received events into HTTP Server-Sent Events (SSE), which are then delivered to the React client in the browser.
 
 # Architecture
 
